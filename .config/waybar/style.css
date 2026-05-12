@@ -48,6 +48,10 @@ window#waybar {
 #bluetooth,
 #custom-idle-indicator,
 #custom-notification-silencing-indicator,
+#custom-storage,
+#custom-memory,
+#custom-gpu,
+#custom-cpu,
 #custom-battery-progress,
 #custom-volume-progress,
 #custom-cpu-progress {
@@ -66,6 +70,22 @@ window#waybar {
 
 #custom-power {
   color: #56b6c2;
+}
+
+#custom-storage {
+  color: #61afef;
+}
+
+#custom-memory {
+  color: #98c379;
+}
+
+#custom-gpu {
+  color: #c678dd;
+}
+
+#custom-cpu {
+  color: #e06c75;
 }
 
 #custom-network-progress.disconnected {
@@ -102,6 +122,10 @@ window#waybar {
 #bluetooth:hover,
 #custom-idle-indicator:hover,
 #custom-notification-silencing-indicator:hover,
+#custom-storage:hover,
+#custom-memory:hover,
+#custom-gpu:hover,
+#custom-cpu:hover,
 #custom-battery-progress:hover,
 #custom-volume-progress:hover,
 #custom-cpu-progress:hover,

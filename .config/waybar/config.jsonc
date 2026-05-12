@@ -15,7 +15,14 @@
     "custom/notification-silencing-indicator"
   ],
   "modules-center": ["hyprland/workspaces"],
-  "modules-right": ["custom/battery-progress", "custom/volume-progress", "custom/cpu-progress"],
+  "modules-right": [
+    "custom/storage",
+    "custom/memory",
+    "custom/gpu",
+    "custom/cpu",
+    "custom/battery-progress",
+    "custom/volume-progress"
+  ],
   "hyprland/workspaces": {
     "on-click": "activate",
     "format": "{name}",
@@ -71,12 +78,33 @@
     "signal": 10,
     "return-type": "json"
   },
-  "custom/cpu-progress": {
-    "exec": "~/.config/waybar/scripts/cpu-progress.sh",
+  "custom/cpu": {
+    "exec": "~/.config/waybar/scripts/waybar-cpu.py",
     "return-type": "json",
     "interval": 5,
     "on-click": "omarchy-launch-or-focus-tui btop",
     "on-click-right": "alacritty"
+  },
+  "custom/gpu": {
+    "exec": "~/.config/waybar/scripts/waybar-gpu.py",
+    "return-type": "json",
+    "interval": 5,
+    "on-click": "omarchy-launch-or-focus-tui btop",
+    "on-click-right": "notify-send -u low 'GPU details are in the tooltip'"
+  },
+  "custom/memory": {
+    "exec": "~/.config/waybar/scripts/waybar-memory.py",
+    "return-type": "json",
+    "interval": 5,
+    "on-click": "omarchy-launch-or-focus-tui btop",
+    "on-click-right": "alacritty -e free -h"
+  },
+  "custom/storage": {
+    "exec": "~/.config/waybar/scripts/waybar-storage.py",
+    "return-type": "json",
+    "interval": 5,
+    "on-click": "xdg-open /",
+    "on-click-right": "alacritty -e df -h /"
   },
   "custom/battery-progress": {
     "exec": "~/.config/waybar/scripts/battery-progress.sh",
