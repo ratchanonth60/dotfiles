@@ -1,0 +1,124 @@
+* {
+  border: none;
+  border-radius: 4px;
+  min-height: 0;
+  font-family: "JetBrainsMono Nerd Font";
+  font-size: 14px;
+}
+
+window#waybar {
+  background: #282c34;
+  color: #9cdef2;
+  border: 3px solid #61afef;
+  border-left-color: #56b6c2;
+  border-right-color: #56b6c2;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+}
+
+#workspaces {
+  background-color: transparent;
+  padding-left: 40px;
+}
+
+#workspaces button {
+  all: initial;
+  min-width: 0;
+  box-shadow: inherit;
+  padding: 6px 10px;
+  margin: 6px 3px;
+  border-radius: 4px;
+  background-color: #2e3440;
+  color: #56b6c2;
+}
+
+#workspaces button.active {
+  color: #2e3440;
+  background-color: #56b6c2;
+}
+
+#workspaces button:hover {
+  color: #2e3440;
+  background-color: #56b6c2;
+}
+
+#clock,
+#custom-power,
+#custom-network-progress,
+#bluetooth,
+#custom-idle-indicator,
+#custom-notification-silencing-indicator,
+#custom-battery-progress,
+#custom-volume-progress,
+#custom-cpu-progress {
+  padding: 6px 12px;
+  margin: 6px 6px;
+  background-color: #292d35;
+  border: 2px solid #61afef;
+  border-radius: 2px;
+}
+
+#clock {
+  font-weight: bold;
+  font-size: 12px;
+  color: #fab387;
+}
+
+#custom-power {
+  color: #56b6c2;
+}
+
+#custom-network-progress.disconnected {
+  background-color: #e06c75;
+  color: #1e1e2e;
+}
+
+#bluetooth.disabled {
+  color: #fab387;
+}
+
+#custom-battery-progress.warning {
+  background-color: #fab387;
+  color: #2e3440;
+}
+
+#custom-battery-progress.critical {
+  background-color: #bf616a;
+  color: #ffffff;
+}
+
+#custom-volume-progress.muted {
+  background-color: #e06c75;
+  color: #1e1e2e;
+}
+
+#custom-idle-indicator.active,
+#custom-notification-silencing-indicator.active {
+  color: #e5c07b;
+}
+
+#custom-power:hover,
+#custom-network-progress:hover,
+#bluetooth:hover,
+#custom-idle-indicator:hover,
+#custom-notification-silencing-indicator:hover,
+#custom-battery-progress:hover,
+#custom-volume-progress:hover,
+#custom-cpu-progress:hover,
+#clock:hover {
+  background-color: #4c566a;
+  border: 2px solid #56b6c2;
+  color: #56b6c2;
+  transition: all 0.2s ease-in-out;
+}
+
+tooltip {
+  color: #56b6c2;
+  background-color: #3b4252;
+  border: 1px solid #56b6c2;
+  font-weight: bold;
+}
+
+tooltip label {
+  color: #78bec7;
+}

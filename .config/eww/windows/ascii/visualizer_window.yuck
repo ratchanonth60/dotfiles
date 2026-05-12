@@ -1,0 +1,26 @@
+;; ── visualizer window ───────────────────────────────────────────────────
+;; Displays ASCII visual for audio activity.
+;; Anchored very top
+
+(defwindow visualizer_window
+  :visible show_eww
+  :monitor 0
+  :geometry (geometry :x 38 :y 143 :width 340 :height 150)
+  :layer "bottom"
+  :stacking "bg"
+  :focusable false
+  :window-type "wayland"
+  :anchor [ "top center" ]
+  (audio-visualizer))
+  
+  (defwidget audio-visualizer []
+  (box
+    :class "visualizer-outer-frame"
+    :padding 6
+    (box
+      :class "visualizer-inner-frame"
+      :padding 10
+      (label
+        :text visualizer_content
+        :markup true
+        :class "visualizer-text"))))

@@ -1,0 +1,129 @@
+@import "../../../../.config/omarchy/current/theme/walker.css";
+
+* {
+  all: unset;
+  font-family: monospace;
+  font-size: 18px;
+  color: @text;
+}
+
+scrollbar {
+  opacity: 0;
+}
+
+.normal-icons {
+  -gtk-icon-size: 20px;
+}
+
+.large-icons {
+  -gtk-icon-size: 34px;
+}
+
+.box-wrapper {
+  background: alpha(@base, 0.92);
+  border: 2px solid alpha(@selected-text, 0.9);
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: 0 0 20px alpha(@selected-text, 0.18);
+}
+
+.search-container {
+  background: alpha(@background, 0.88);
+  border: 1px solid alpha(@selected-text, 0.28);
+  border-radius: 14px;
+  padding: 14px 16px;
+}
+
+.input {
+  font-size: 21px;
+  font-weight: 600;
+}
+
+.input placeholder {
+  opacity: 0.48;
+}
+
+.input:focus,
+.input:active {
+  box-shadow: none;
+  outline: none;
+}
+
+.content-container {
+  margin-top: 2px;
+}
+
+.placeholder,
+.elephant-hint {
+  padding: 24px 8px;
+  color: alpha(@text, 0.55);
+}
+
+child {
+  border-radius: 14px;
+  margin: 3px 0;
+  transition: 160ms ease;
+}
+
+child:hover {
+  background: alpha(@selected-text, 0.06);
+}
+
+child:selected {
+  background: linear-gradient(135deg, alpha(@selected-text, 0.20), alpha(@selected-text, 0.08));
+  border: 1px solid alpha(@selected-text, 0.35);
+}
+
+child:selected .item-box * {
+  color: @selected-text;
+}
+
+.item-box {
+  padding: 10px 14px;
+}
+
+.item-text-box {
+  all: unset;
+  padding: 8px 0;
+}
+
+.item-text {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.item-subtext {
+  font-size: 13px;
+  color: alpha(@text, 0.58);
+  margin-top: 2px;
+}
+
+.item-image {
+  margin-right: 16px;
+  -gtk-icon-transform: scale(0.95);
+}
+
+.current {
+  font-style: italic;
+}
+
+.keybinds {
+  margin-top: 2px;
+}
+
+.keybind-hints {
+  background: alpha(@background, 0.7);
+  border: 1px solid alpha(@selected-text, 0.18);
+  border-radius: 12px;
+  padding: 10px 12px;
+}
+
+.global-keybinds,
+.item-keybinds {
+  color: alpha(@text, 0.72);
+}
+
+.error {
+  margin-top: 8px;
+  color: #f7768e;
+}
